@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+}
+
+/*@import 'jquery-ui/themes/base/all';*/
+@import "./multi-select";
+[v-cloak] {
+    display: none;
+}
+
+@import 'unreset';
+.unreset{
+    @include unreset();
+
+    table{
+        border-collapse: collapse;
+        td{
+            border: 1px solid #808080;
+        }
+    }
+}
+
+@layer base{
+    [data-theme="classic"] {
+        --color-primary: #2d4059;
+        --color-secondary: #2d4059;
+        --color-tertiary: white;
+        --color-accent: #2d4059;
+        --color-button: var(--color-primary);
+        --color-page: #eeeeee;
+    }
+
+    [data-theme="vitamin"] {
+        --color-primary: #F2910A;
+        --color-secondary: #E94822;
+        --color-tertiary: white;
+        --color-accent: #F2910A;
+        --color-button: var(--color-primary);
+        --color-page: #eeeeee;
+    }
+
+    [data-theme="rusty"] {
+        --color-primary: #EA7362;
+        --color-secondary: white;
+        --color-tertiary: #7A4E4E;
+        --color-accent: #5C2626;
+        --color-button: var(--color-primary);
+        --color-page: #eeeeee;
+    }
+
+    [data-theme="mustard"] {
+        --color-primary: #EA5455;
+        --color-secondary: #2D4059;
+        --color-tertiary:  #FFDA77;
+        --color-accent: transparent;
+        --color-button: var(--color-primary);
+        --color-page: #eeeeee;
+    }
+
+    [data-theme="focus"] {
+        --color-primary: #D3D6DB;
+        --color-secondary: white;
+        --color-tertiary:  #51585F;
+        --color-accent: transparent;
+        --color-button: var(--color-primary);
+        --color-page: #eeeeee;
+    }
+
+    [data-theme="nice"] {
+        --color-primary: white;
+        --color-secondary: white;
+        --color-tertiary:  #E65C71;
+        --color-accent: transparent;
+        --color-button: var(--color-primary);
+        --color-page: #eeeeee;
+    }
+
+    [data-theme="energy"] {
+        --color-primary: white;
+        --color-secondary: white;
+        --color-tertiary:  #FC91C0;
+        --color-accent: transparent;
+        --color-button: var(--color-primary);
+        --color-page: #eeeeee;
+    }
+
+    [data-theme="ocean"] {
+        --color-primary: #A2D5F2;
+        --color-secondary: #FAFAFA;
+        --color-tertiary:  #2E80AE;
+        --color-accent: transparent;
+        --color-button: var(--color-primary);
+        --color-page: #eeeeee;
+    }
+
+    [data-theme="smooth"] {
+        --color-primary: #F5F5C6;
+        --color-secondary: #F5F5C6;
+        --color-tertiary:  #497876;
+        --color-accent: transparent;
+        --color-button: var(--color-primary);
+        --color-page: #eeeeee;
+    }
+
+    [data-theme="fall"] {
+        --color-primary: #fe703c;
+        --color-secondary: #fec83c;
+        --color-tertiary: #145363;
+        --color-accent: transparent;
+        --color-button: var(--color-primary);
+        --color-page: #eeeeee;
+    }
+}
+

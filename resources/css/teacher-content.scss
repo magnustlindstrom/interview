@@ -1,0 +1,330 @@
+.switch, .switch-review {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+    margin-bottom: 0;
+}
+
+.switch input,
+.switch-review input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.switch input:checked + .slider {
+    background-color: #2196F3;
+}
+
+.switch input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+.switch-review input:checked + .slider {
+    background-color: green;
+}
+
+.switch-review input:focus + .slider {
+    box-shadow: 0 0 1px green;
+}
+
+.eye {
+    background-color: transparent;
+    background-image: url("/icons/eye-off.svg");
+    background-size: cover;
+    height: 30px;
+    cursor: pointer;
+}
+
+.eye:hover,
+.eye-on:hover {
+    background-color: lightgray;
+}
+
+.eye-on {
+    background-image: url("/icons/eye-on.svg");
+}
+
+.bi {
+    stroke: #04A1E8;
+    stroke-width: 3;
+    fill: transparent;
+}
+
+.bi-square-fill {
+    fill: #04A1E8;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.bordered {
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.bordered-not-visible {
+    /*opacity: 0.75;*/
+    background-color: #e5e8e8;
+}
+
+.sign {
+    margin-right: 5px;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 1.5%; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    overflow: hidden;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    height: 97%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sequence-card {
+    border: 1px solid red;
+    border-radius: 5px;
+    width: 81%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+    background-color: white;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Orange cards */
+.sc-bg-orange {
+    border-color: orange;
+}
+
+.sc-bg-orange:hover {
+    background-color: orange;
+}
+
+.sc-bg-orange-filled {
+    background-color: orange;
+}
+
+/* Red cards */
+.sc-bg-red {
+    border-color: red;
+}
+
+.sc-bg-red:hover {
+    background-color: red;
+}
+
+.sc-bg-red-filled {
+    background-color: red;
+}
+
+/* Green cards */
+.sc-bg-green {
+    border-color: green;
+}
+
+.sc-bg-green:hover {
+    background-color: green;
+}
+
+.sc-bg-green-filled {
+    background-color: green;
+}
+
+.sequence-content {
+    overflow-y: scroll;
+}
+
+/* .sequence-card:first-child {
+    padding-top: 15px !important;
+} */
+
+.sequence-card:last-child {
+    /*margin-bottom: 30px !important;*/
+}
+
+.sequence-connector {
+    display: list-item;
+    width: 50%;
+    border-right: 1px solid red;
+    height: 20px;
+}
+
+.expandable {
+    cursor: pointer;
+}
+
+#theory-sc, #follow-up-sc {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 85% !important;
+}
+
+.modal-tab-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.ls-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#exercises-content {
+    height: 100%;
+    width: 100%;
+}
+
+.one-third {
+    width: 33% !important;
+}
+
+.arrows {
+    display: none;
+    gap: 15px;
+}
+
+.icon {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+}
+
+.arrow-left {
+    background-image: url("/icons/arrow-left.svg");
+}
+
+.arrow-right {
+    background-image: url("/icons/arrow-right.svg");
+}
+
+label.close {
+    background-image: url("/icons/close.svg");
+}
+
+.icons {
+    gap: 56px;
+}
+
+.answer {
+    color: black;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+.correct-answer {
+    color: green;
+    font-size: 21px;
+}
+
+.correct-icon {
+    background-image: url("/icons/check.svg");
+}
+
+.incorrect-icon {
+    background-image: url("/icons/close.svg");
+}
+
+#page-numbers {
+    font-size: 21px;
+}
+
+.question-content {
+    padding: 15px;
+    border-bottom: 1px solid rgba(0,40,100,.12) !important;
+    border-color: #161c2d !important;
+}
+
+.solution-content {
+    padding: 15px;
+    border-top: 1px solid rgba(0,40,100,.12) !important;
+    border-color: #161c2d !important;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.answer-block {
+    padding: 15px;
+}

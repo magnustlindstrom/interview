@@ -1,0 +1,23 @@
+version: '3'
+services:
+    mariadb:
+        image: 'mariadb'
+        ports:
+            - '${FORWARD_DB_PORT:-3306}:3306'
+        restart: always
+        environment:
+            MARIADB_ROOT_PASSWORD: 'examplepass'
+            MARIADB_DATABASE: 'exampledb'
+            MARIADB_USER: 'exampleuser'
+            MARIADB_PASSWORD: 'examplepass'
+            MARIADB_ALLOW_EMPTY_PASSWORD: 'yes'
+        volumes:
+            - 'pluggamattemysql:/var/lib/mariadb'
+        networks:
+            - pluggamatte
+networks:
+    pluggamatte:
+        driver: bridge
+volumes:
+    pluggamattemysql:
+        driver: local
